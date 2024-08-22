@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    url: jdbc:mysql://39.99.245.72:3306/hsy?characterEncoding=utf-8&serverTimezone=UTC
+    username: hsy
+    password: 8tMtWLEDpyhB7Msh
+    driver-class-name: com.mysql.cj.jdbc.Driver # 请注意，这里使用了新版的驱动类名
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:/mapper/**/*.xml
+
+server:
+  port: 8090
