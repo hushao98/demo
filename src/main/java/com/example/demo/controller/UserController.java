@@ -21,4 +21,16 @@ public class UserController {
         int size = params.getOrDefault("size", 10); // 默认值为10
         return userService.getUsersPage(page, size);
     }
+
+    @PostMapping("/add")
+    public String addUser(@RequestBody User user) {
+        boolean result = userService.addUser(user);
+        return result ? "User added successfully" : "Failed to add user";
+    }
+
+    @PostMapping("/delete/{id}")
+    public String deleteUser(@PathVariable Long id) {
+        boolean result = userService.deleteUser(id);
+        return result ? "User deleted successfully" : "Failed to delete user";
+    }
 }

@@ -17,4 +17,14 @@ public class UserService {
         Page<User> userPage = new Page<>(page, size);
         return userMapper.selectPage(userPage, null);
     }
+
+    public boolean addUser(User user) {
+        int rows = userMapper.insert(user);
+        return rows > 0;
+    }
+
+    public boolean deleteUser(Long id) {
+        int rows = userMapper.deleteById(id);
+        return rows > 0;
+    }
 }

@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @TableName("users")
 public class User {
     @TableId
-    private Integer id;
+    private Long id;
     private String name;
     private String password;
     private String phone;
