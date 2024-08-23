@@ -79,7 +79,8 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.example.demo.DemoApplication</mainClass>
-                    <skip>true</skip>
+                    <!-- 打包-->
+                    <skip>false</skip>
                 </configuration>
                 <executions>
                     <execution>
